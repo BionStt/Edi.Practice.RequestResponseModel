@@ -17,10 +17,14 @@ The request/response models are for designing multi layer applications or Web AP
 
 For example, your are writing a method that query a database and return a Cat object:
 
+```
 public Cat GetCat(int id);
+```
 
 But when the caller get a null from GetCat(128), they don't know if there is no cat with id 128 in database, or is the service itself having exception. Futhermore, in common practices, a service usually returns a flag that indicats if the API call is success or not, along with the actual item. So the above method usually become like this:
 
+```
 public Response<Cat> GetCat(int id);
+```
 
 And the caller can check Response.IsSuccess to determine if anything went wrong with the API call, and get extra information about the response code, exception details etc..
