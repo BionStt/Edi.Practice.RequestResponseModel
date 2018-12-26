@@ -8,6 +8,7 @@
     <Description>The Request and Response models used in my projects including my blog system.</Description>
     <RepositoryUrl>https://github.com/EdiWang/Edi.Practice.RequestResponseModel</RepositoryUrl>
     <PackageProjectUrl>https://edi.wang</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/EdiWang/Edi.Practice.RequestResponseModel/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
 </Project>
