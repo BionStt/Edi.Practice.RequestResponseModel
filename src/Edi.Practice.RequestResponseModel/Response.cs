@@ -24,6 +24,11 @@ namespace Edi.Practice.RequestResponseModel
     public class Response<T> : Response
     {
         public T Item { get; set; }
+
+        public Response(T item = default(T))
+        {
+            Item = item;
+        }
     }
 
     public class SuccessResponse : Response
@@ -41,10 +46,9 @@ namespace Edi.Practice.RequestResponseModel
             IsSuccess = true;
         }
 
-        public SuccessResponse(T item)
+        public SuccessResponse(T item = default(T)) : base(item)
         {
             IsSuccess = true;
-            Item = item;
         }
     }
 
@@ -54,6 +58,18 @@ namespace Edi.Practice.RequestResponseModel
         {
             ResponseCode = responseCode;
         }
+
+        public FailedResponse(string message)
+        {
+            Message = message;
+        }
+
+        public FailedResponse(int responseCode, string message, Exception ex = null)
+        {
+            ResponseCode = responseCode;
+            Message = message;
+            Exception = ex;
+        }
     }
 
     public class FailedResponse<T> : Response<T>
@@ -61,6 +77,18 @@ namespace Edi.Practice.RequestResponseModel
         public FailedResponse(int responseCode)
         {
             ResponseCode = responseCode;
+        }
+
+        public FailedResponse(string message)
+        {
+            Message = message;
+        }
+
+        public FailedResponse(int responseCode, string message, Exception ex = null)
+        {
+            ResponseCode = responseCode;
+            Message = message;
+            Exception = ex;
         }
     }
 }

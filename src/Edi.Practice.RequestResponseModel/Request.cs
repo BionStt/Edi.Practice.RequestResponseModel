@@ -13,12 +13,7 @@ namespace Edi.Practice.RequestResponseModel
     {
         public T Item { get; set; }
 
-        public Request()
-        {
-
-        }
-
-        public Request(T item)
+        public Request(T item = default(T))
         {
             Item = item;
         }
