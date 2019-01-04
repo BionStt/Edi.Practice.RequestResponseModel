@@ -9,8 +9,9 @@
     <RepositoryUrl>https://github.com/EdiWang/Edi.Practice.RequestResponseModel</RepositoryUrl>
     <PackageProjectUrl>https://edi.wang</PackageProjectUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/EdiWang/Edi.Practice.RequestResponseModel/master/LICENSE</PackageLicenseUrl>
-    <Version>1.1.0</Version>
-    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.2.0</Version>
+    <FileVersion>1.2.0.0</FileVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
   </PropertyGroup>
 
 </Project>

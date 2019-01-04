@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Edi.Practice.RequestResponseModel
 {
@@ -14,10 +12,12 @@ namespace Edi.Practice.RequestResponseModel
 
         public int ResponseCode { get; set; }
 
-        public Response()
+        public dynamic Addition { get; set; }
+
+        public Response(bool isSuccess = false, string message = "")
         {
-            IsSuccess = false;
-            Message = string.Empty;
+            IsSuccess = isSuccess;
+            Message = message;
         }
     }
 
@@ -28,67 +28,6 @@ namespace Edi.Practice.RequestResponseModel
         public Response(T item = default(T))
         {
             Item = item;
-        }
-    }
-
-    public class SuccessResponse : Response
-    {
-        public SuccessResponse()
-        {
-            IsSuccess = true;
-        }
-    }
-
-    public class SuccessResponse<T> : Response<T>
-    {
-        public SuccessResponse()
-        {
-            IsSuccess = true;
-        }
-
-        public SuccessResponse(T item = default(T)) : base(item)
-        {
-            IsSuccess = true;
-        }
-    }
-
-    public class FailedResponse : Response
-    {
-        public FailedResponse(int responseCode)
-        {
-            ResponseCode = responseCode;
-        }
-
-        public FailedResponse(string message)
-        {
-            Message = message;
-        }
-
-        public FailedResponse(int responseCode, string message, Exception ex = null)
-        {
-            ResponseCode = responseCode;
-            Message = message;
-            Exception = ex;
-        }
-    }
-
-    public class FailedResponse<T> : Response<T>
-    {
-        public FailedResponse(int responseCode)
-        {
-            ResponseCode = responseCode;
-        }
-
-        public FailedResponse(string message)
-        {
-            Message = message;
-        }
-
-        public FailedResponse(int responseCode, string message, Exception ex = null)
-        {
-            ResponseCode = responseCode;
-            Message = message;
-            Exception = ex;
         }
     }
 }
