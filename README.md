@@ -1,6 +1,8 @@
 # Edi.Practice.RequestResponseModel
 The Request and Response models used in my projects including my blog system.
 
+[![Build status](https://dev.azure.com/ediwang/EdiWang-GitHub-Builds/_apis/build/status/Edi.Practice.RequestResponseModel-CI)](https://dev.azure.com/ediwang/EdiWang-GitHub-Builds/_build/latest?definitionId=37)
+
 **Package Manager**
 ```
 Install-Package Edi.Practice.RequestResponseModel
